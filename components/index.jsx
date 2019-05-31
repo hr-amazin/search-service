@@ -46,7 +46,7 @@ class Search extends React.Component {
     };
     
     submit(){
-      this.props.setUuid(this.state.value);
+      this.props.setUuid(ParseInt(this.state.value)||1001);
     }
   
     render(){
@@ -64,7 +64,7 @@ class Search extends React.Component {
         <div style={{height: '100px', backgroundColor:'red'}}>
 
         <div style={{height:'100px',  width:'15%', backgroundColor:'#24547C', display:'inline-block', overflow:'auto'}}>
-        <img src="logo.png" style={{display:'block', maxHeight:'100%',transform:'scale(1.3)', maxWidth:'100%', marginLeft: 'auto', marginRight: 'auto'}} ></img>
+        <img src="https://amazinsearchbar.herokuapp.com/logo.png" style={{display:'block', maxHeight:'100%',transform:'scale(1.3)', maxWidth:'100%', marginLeft: 'auto', marginRight: 'auto'}} ></img>
         </div>
 
         <div style={{height:'100px', width:'85%', display:'inline-block', backgroundColor:'#24547C'}}>
