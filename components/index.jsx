@@ -47,7 +47,7 @@ class Search extends React.Component {
     };
     
     submit(e){
-     
+      e.preventDefault();
       this.props.setUuid(ParseInt(this.state.value)||1001);
     }
   
