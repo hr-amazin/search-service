@@ -16,6 +16,7 @@ class Search extends React.Component {
       this.handleChange = this.handleChange.bind(this);
       this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this);
       this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this);
+      this.submit = this.submit.bind(this);
     }
 
     componentDidMount(){
@@ -45,7 +46,8 @@ class Search extends React.Component {
       });
     };
     
-    submit(){
+    submit(e){
+      e.preventDefault();
       this.props.setUuid(ParseInt(this.state.value)||1001);
     }
   
@@ -75,7 +77,7 @@ class Search extends React.Component {
         </select>
     
         <input type="text" value={this.state.value} onChange={this.handleChange} style={{fontSize:'15px',height:'100%', minWidth:'400px', width:'70%', float:'left', borderRadius:'2px', fontFamily: 'sans-serif'}}/>
-        <button onClick={this.submit} style={{height: '100%', width: '50px',  backgroundColor: '#febd69', border:'1px solid #febd69', borderRadius:'2px'}}><img style={{maxWidth: '100%', maxHeight: '100%', padding:'2px'}}src="https://png.icons8.com/search"></img></button>
+        <button onClick={this.submit} style={{height: '100%', width: '50px',  backgroundColor: '#febd69', border:'1px solid #febd69', borderRadius:'2px', float:'left'}}><img style={{maxWidth: '100%', maxHeight: '100%', padding:'2px'}}src="https://png.icons8.com/search"></img></button>
        </form>
         
 
