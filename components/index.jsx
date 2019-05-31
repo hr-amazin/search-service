@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 
-class App extends React.Component {
+class Search extends React.Component {
 
     constructor(props){
       super(props);
@@ -47,7 +47,6 @@ class App extends React.Component {
     
     submit(){
       this.props.setUuid(this.state.value);
-
     }
   
     render(){
@@ -95,4 +94,5 @@ class App extends React.Component {
   
   }
 
-  ReactDOM.render(<App />, document.getElementById('searchbar'));
+  window.Search = Search;
+  // ReactDOM.render(<App />, document.getElementById('searchbar'));
