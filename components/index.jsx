@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ButtonAppBar from './appbar.jsx';
+import Search from './appbar.jsx';
 
 
-ReactDOM.render(<ButtonAppBar/>, document.getElementById('searchbar'))
+window.Search = Search;
 
 
 
