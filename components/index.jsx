@@ -4,7 +4,7 @@ import Search from './appbar.jsx';
 
 
 window.Search = Search;
-  ReactDOM.render(<Search />, document.getElementById('searchbar'));
+  // ReactDOM.render(<Search />, document.getElementById('searchbar'));
 
 
 
