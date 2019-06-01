@@ -163,7 +163,7 @@ function ButtonAppBar(props) {
     function submitLocalid (e) {
         e.preventDefault();
         // console.log(localid,'this is local id')
-        props.setUuid(localid);
+        // props.setUuid(localid);
 
     }
   return (
