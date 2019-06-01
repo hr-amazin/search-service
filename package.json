@@ -1,6 +1,10 @@
 {
   "name": "searchbar",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.1.0",
+    "npm": "6.9.0"
+  },
   "description": "",
   "main": "./server/index.js",
   "scripts": {
