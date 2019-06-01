@@ -4,9 +4,12 @@ import Search from './appbar.jsx';
 
 
 window.Search = Search;
-  // ReactDOM.render(<Search />, document.getElementById('searchbar'));
+  ReactDOM.render(<Search />, document.getElementById('searchbar'));
 
 
+
+
+// window.Search = Search;
 // const theme = {   
 //   container: {position: 'relative'},   
 //   input: {
