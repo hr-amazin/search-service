@@ -23,7 +23,7 @@ class SmartApp extends React.Component {
     }
 
     render(){
-        // const classes = useStyles();
+        const classes = useStyles();
         return (
             <div >
 
