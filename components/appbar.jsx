@@ -1,109 +1,17 @@
 import React, {useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import Autosuggest from 'react-autosuggest';
-import {suggestions} from './data.js';
-import {categorydata} from './data.js';
-
-/////////////
-
-const theme = {   
-    container: {position: 'relative'},   
-    input: {
-    //   maxWidth: '100%',
-      
-      width: '100%',
-      height: 45,
-      padding: '10px 20px',
-      fontFamily: 'Helvetica, sans-serif',     
-      fontWeight: 300,     
-      fontSize: 16,     
-      border: '1px solid #aaa',   },   
-    inputFocused: {     
-      outline: 'none'   },   
-    inputOpen: {     
-      borderBottomLeftRadius: 0,     
-      borderBottomRightRadius: 0   },   
-    suggestionsContainer: {     
-      display: 'none'   },   
-      suggestionsContainerOpen: {    
-        color: 'black', 
-        display: 'block',     
-        position: 'absolute',     
-        top: 51,     
-        width: '100%',     
-        border: '1px solid #aaa',     
-        backgroundColor: '#fff',     
-        fontFamily: 'Helvetica, sans-serif',     
-        fontWeight: 300,     
-        fontSize: 16,     
-        borderBottomLeftRadius: 4,    
-        borderBottomRightRadius: 4,     
-        zIndex: 2   },   
-      suggestionsList: {     
-        margin: 0,     
-        padding: 0,     
-        listStyleType: 'none',   },   
-      suggestion: {     
-        cursor: 'pointer',     
-        padding: '10px 20px'   },   
-      suggestionHighlighted: {     
-        backgroundColor: '#ddd'   } 
-      };
-  
+import {suggestions, categorydata, theme, useStyles} from './data.js';
 
 
 
 
-////////////
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    border: '2px solid orange',
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  titleleft: {
-    // border: '2px solid green',
-    height:'100px',
-    flexGrow: 1,
-  },
-  titleright: {
-    // border: '2px solid green',
-    height:'100px',
-    flexGrow: 1,
-  },
-  titleselect: {
-    border: '2px solid #24547C',
-    height:'48px',
-    width:'100px',
-    backgroundColor: 'grey'
-    // flexGrow: 1,
-  },
-  titlebutton: {
-    // border: '2px solid green',
-    height:'48px',
-    width:'48px',
-    // flexGrow: 1,
-    backgroundColor:'#febd69',
-    border:'1px solid #24547C',
-    borderRadius:'5px'
-  },
-  titlemiddle: {
-    border: '2px solid #24547C',
-    height:'50px',
-    flexGrow: 3
-    
-  },
-}));
-
-function ButtonAppBar(props) {
+function ButtonAppBar() {
     const classes = useStyles();
     const [cat, setCat] = useState('desktop');
     const [categories, setCategories] = useState(categorydata);
@@ -161,8 +69,8 @@ function ButtonAppBar(props) {
               onChange: handleChange
             };
     function submitLocalid (e) {
-        e.preventDefault();
-        // console.log(localid,'this is local id')
+        // e.preventDefault();
+        console.log(localid,'this is local id')
         props.setUuid(localid);
 
     }

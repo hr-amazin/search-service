@@ -1,3 +1,4 @@
+import { makeStyles } from '@material-ui/core/styles';
 
 const suggestions = [
 {id:1000,text:'Lenovo ThinkCentre M92p Business Desktop Computer - Intel Core i7 Up to 3.9GHz, 16GB RAM, 480GB SSD, Windows 10 Pro'},
@@ -110,4 +111,91 @@ const suggestions = [
   'Keyboard/Mouse',
   'speaker']
 
-  export {suggestions, categorydata}
+  const theme = {   
+    container: {position: 'relative'},   
+    input: {
+    //   maxWidth: '100%',
+      
+      width: '100%',
+      height: 45,
+      padding: '10px 20px',
+      fontFamily: 'Helvetica, sans-serif',     
+      fontWeight: 300,     
+      fontSize: 16,     
+      border: '1px solid #aaa',   },   
+    inputFocused: {     
+      outline: 'none'   },   
+    inputOpen: {     
+      borderBottomLeftRadius: 0,     
+      borderBottomRightRadius: 0   },   
+    suggestionsContainer: {     
+      display: 'none'   },   
+      suggestionsContainerOpen: {    
+        color: 'black', 
+        display: 'block',     
+        position: 'absolute',     
+        top: 51,     
+        width: '100%',     
+        border: '1px solid #aaa',     
+        backgroundColor: '#fff',     
+        fontFamily: 'Helvetica, sans-serif',     
+        fontWeight: 300,     
+        fontSize: 16,     
+        borderBottomLeftRadius: 4,    
+        borderBottomRightRadius: 4,     
+        zIndex: 2   },   
+      suggestionsList: {     
+        margin: 0,     
+        padding: 0,     
+        listStyleType: 'none',   },   
+      suggestion: {     
+        cursor: 'pointer',     
+        padding: '10px 20px'   },   
+      suggestionHighlighted: {     
+        backgroundColor: '#ddd'   } 
+      };
+
+      const useStyles = makeStyles(theme => ({
+        root: {
+          border: '2px solid orange',
+          flexGrow: 1,
+        },
+        menuButton: {
+          marginRight: theme.spacing(2),
+        },
+        titleleft: {
+          // border: '2px solid green',
+          height:'100px',
+          flexGrow: 1,
+        },
+        titleright: {
+          // border: '2px solid green',
+          height:'100px',
+          flexGrow: 1,
+        },
+        titleselect: {
+          border: '2px solid #24547C',
+          height:'48px',
+          width:'100px',
+          backgroundColor: 'grey'
+          // flexGrow: 1,
+        },
+        titlebutton: {
+          // border: '2px solid green',
+          height:'48px',
+          width:'48px',
+          // flexGrow: 1,
+          backgroundColor:'#febd69',
+          border:'1px solid #24547C',
+          borderRadius:'5px'
+        },
+        titlemiddle: {
+          border: '2px solid #24547C',
+          height:'50px',
+          flexGrow: 3
+          
+        },
+      }));
+  
+
+  export {suggestions, categorydata, theme, useStyles}
